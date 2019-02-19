@@ -164,7 +164,7 @@ ol li {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-play-state: paused;
 }
 
