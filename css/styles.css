@@ -20,6 +20,33 @@ html {
     scroll-behavior: smooth;
 }
 
+@keyframes swing {
+    20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+
 /*HEADER*/
 
 header {
@@ -56,6 +83,11 @@ body div header nav ul li {
     display: inline-block;
     text-align: center;
     margin: 0.5rem;
+    transition: all 0.3s;
+}
+
+body div header nav ul li:hover{
+    transform: scale(1.1);
 }
 
 body div header nav ul li a {
@@ -106,6 +138,11 @@ ol li {
 
 .shows-calendar {
     font-size:2rem;
+    transition: all 0.3s;
+}
+
+.shows-calendar:hover{
+    transform: scale(1.1);
 }
 
 .fecha {
@@ -113,8 +150,26 @@ ol li {
     margin: 0 10px;
 }
 
+.swing {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+  }
+
 .shows-tickets {
     font-size: 1rem;
+    
+    animation-name: swing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-play-state: paused;
+}
+
+.show-tickets:hover{
+    animation-play-state: running;
 }
 
 .get-tickets {
@@ -157,6 +212,7 @@ ol li {
 
 .store-title {
     margin: 30px 0 0 20px;
+    padding: 0 0 10px 0;
     display: inline-block;
 }
 
