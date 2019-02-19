@@ -155,14 +155,14 @@ ol li {
     
     transform-origin: top center;
     animation-name: swing;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-play-state: paused;
 }
 
-.show-tickets:hover{
+.shows-tickets:hover{
     animation-play-state: running;
 }
 
